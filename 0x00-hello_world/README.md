@@ -1,0 +1,1 @@
+This directory contains the first projects wit C
