@@ -1,0 +1,1 @@
+This directory will be used to practice the _variables_, _if_ statement, and the loops _while_ and _for_.
