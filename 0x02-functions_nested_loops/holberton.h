@@ -9,3 +9,11 @@
  * Return: void
  */
 int _putchar(char c);
+/**
+ *print_alphabet - beginning of program
+ *
+ *Description: prints the alphabet in lowercase using _putchar
+ *
+ *Return: void
+ */
+void print_alphabet(void);
