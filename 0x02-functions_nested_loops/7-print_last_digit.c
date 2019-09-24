@@ -15,17 +15,17 @@ int print_last_digit(int n)
 
 	if (n > 0)
 	{
-		_putchar(48 + l);
+		_putchar(l + 48);
 		return (l);
 	}
 	else if (n == 0)
 	{
 		_putchar(n + 48);
-		return (0);
+		return (n);
 	}
 	else
 	{
 		_putchar(48 + (l * (-1)));
-		return (n * (-1));
+		return (l * (-1));
 	}
 }
