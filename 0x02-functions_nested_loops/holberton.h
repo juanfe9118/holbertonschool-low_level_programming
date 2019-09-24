@@ -35,3 +35,13 @@ void print_alphabet_x10(void);
  *Return: 1 if c is lowercase, 0 otherwise
  */
 int _islower(int c);
+/**
+ *_isalpha - beginning of program
+ *
+ *Description: prints whether a char is alpha ortherwise
+ *
+ *@c: character to be evaluated
+ *
+ *Return: 1 if c is alpha, 0 otherwise
+ */
+int _isalpha(int c);
