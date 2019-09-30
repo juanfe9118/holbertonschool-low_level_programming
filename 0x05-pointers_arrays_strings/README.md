@@ -1,0 +1,1 @@
+# This directory is to learn _pointers, arrays and strings_ in C
