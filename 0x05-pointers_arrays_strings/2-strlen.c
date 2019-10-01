@@ -3,7 +3,7 @@
 /**
  *_strlen - prints the size of a string in bytes
  *
- *@n: pointer that will store the string's location
+ *@s: pointer that will store the string's location
  *
  *Return: size of the string without the null \0 placed at the end of it
  */
