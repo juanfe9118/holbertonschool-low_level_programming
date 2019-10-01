@@ -10,7 +10,7 @@
 void puts_half(char *str)
 {
 	int length = 0;
-	int pos;
+	int pos, print;
 
 	while (str[length] != 0)
 	{
@@ -24,10 +24,11 @@ void puts_half(char *str)
 	{
 		pos = (length - 1) / 2;
 	}
-	while (pos < length)
+	print = length - pos;
+	while (print < length)
 	{
-		_putchar(str[pos]);
-		pos++;
+		_putchar(str[print]);
+		print++;
 	}
 	_putchar(10);
 }
