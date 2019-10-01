@@ -10,18 +10,23 @@
 void puts_half(char *str)
 {
 	int length = 0;
-	int pos = 0;
+	int pos;
 
 	while (str[length] != 0)
 	{
 		length++;
 	}
-	while (str[pos] != 0)
+	if (length % 2 == 0)
 	{
-		if (pos >= length / 2)
-		{
-			_putchar(str[pos]);
-		}
+		pos = length / 2;
+	}
+	else
+	{
+		pos = (length - 1) / 2;
+	}
+	while (pos < length)
+	{
+		putchar(str[pos]);
 		pos++;
 	}
 	_putchar(10);
