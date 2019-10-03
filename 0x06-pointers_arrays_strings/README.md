@@ -1,0 +1,1 @@
+# This directory is to master _pointers, arrays, and strings_ in __C__
