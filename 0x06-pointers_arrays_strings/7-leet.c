@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *cap_string - capitalizes all words in a string
+ *leet - changes the chars "aA" "eE" "oO" "tT" "lL" into 4 3 0 7 1 respectively
  *
  *@s: the pointer containing the string
  *
@@ -12,11 +12,10 @@ char *leet(char *s)
 	char l[] = "aAeEoOtTlL";
 	char n[] = "4433007711";
 	int i = 0;
-	int c;
+	int c = 0;
 
 	while (s[i] != 0)
 	{
-		c = 0;
 		while (l[c] != 0)
 		{
 			if (s[i] == l[c])
