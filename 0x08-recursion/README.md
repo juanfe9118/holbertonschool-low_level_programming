@@ -1,1 +1,1 @@
-# This directory is to lear _recursion_ in C
+# This directory is to learn _recursion_ in C
