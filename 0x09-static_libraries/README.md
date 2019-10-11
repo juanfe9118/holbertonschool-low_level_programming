@@ -1,0 +1,1 @@
+# This directory is to learn about _static libraries_ in C
