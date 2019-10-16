@@ -16,9 +16,7 @@ char *str_concat(char *s1, char *s2)
 	char *a;
 
 	if (s1 == 0)
-	{
 		len1 = 0;
-	}
 	else
 	{
 		for (len1 = 0; s1[len1] != 0; len1++)
@@ -48,5 +46,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		a[i_s1] = s2[i_s2];
 	}
+	if (*a == 0)
+		return (0);
 	return (a);
 }
