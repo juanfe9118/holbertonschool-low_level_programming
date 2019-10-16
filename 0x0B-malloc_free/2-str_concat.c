@@ -42,10 +42,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		a[i_s1] = s1[i_s1];
 	}
-	for (i_s2 = 0; i_s2 <= len2; i_s1++, i_s2++)
+	for (i_s2 = 0; i_s2 < len2; i_s1++, i_s2++)
 	{
 		a[i_s1] = s2[i_s2];
 	}
+	a[i_s1] = 0;
 	if (*a == 0)
 		return (0);
 	return (a);
