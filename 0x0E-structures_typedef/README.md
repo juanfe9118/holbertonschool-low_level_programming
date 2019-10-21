@@ -1,0 +1,1 @@
+# This directory is for learning to use _structures and typedef_ in C
