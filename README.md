@@ -1,1 +1,1 @@
-# This repo is for taking the first steps in **C**
+# This repo is for taking the first steps in _C_
