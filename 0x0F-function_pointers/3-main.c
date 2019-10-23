@@ -1,5 +1,15 @@
 #include "3-calc.h"
 
+/**
+ *main - entry point
+ *
+ *Description: calculates an operation between two numbers
+ *
+ *@argc: argument count
+ *@argv: argument vectors
+ *
+ *Return: 0
+ */
 int main(int argc, char *argv[])
 {
 	int (*op)(int, int);
