@@ -2,10 +2,6 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-void print_c(va_list x);
-void print_i(va_list x);
-void print_f(va_list x);
-void print_s(va_list x);
 /**
  * print_all - printing all
  *
