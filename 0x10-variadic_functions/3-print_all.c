@@ -38,8 +38,6 @@ void print_s(va_list x)
 {
 	char *str = va_arg(x, char *);
 
-	if (*str == '\0')
-		str = "(nil)";
 	printf("%s", str);
 }
 /**
