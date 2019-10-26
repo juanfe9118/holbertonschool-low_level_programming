@@ -13,11 +13,6 @@ void print_s(va_list x);
  * We can not change the value or pointer
  * Return: Nothing, is void
  */
-typedef struct ty
-{
-	char func;
-	void (*p)(va_list);
-} type;
 void print_all(const char * const format, ...)
 {
 	va_list ar;
@@ -51,21 +46,42 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(ar);
 }
+/**
+ *print_c - prints a char
+ *@x: va_list passed to the function
+ *Return: nothing
+ */
 void print_c(va_list x)
 {
 	printf("%c", va_arg(x, int));
 }
+/**
+ *print_i - prints an int
+ *@x: va_list passed to the function
+ *Return: nothing
+ */
 void print_i(va_list x)
 {
 	printf("%d", va_arg(x, int));
 }
+/**
+ *print_f - prints a float
+ *@x: va_list passed to the function
+ *Return: nothing
+ */
 void print_f(va_list x)
 {
 	printf("%f", va_arg(x, double));
 }
+/**
+ *print_s - prints a string
+ *@x: va_list passed to the function
+ *Return: nothing
+ */
 void print_s(va_list x)
 {
 	char *str = va_arg(x, char *);
+
 	if (*str == '\0')
 		str = "(nil)";
 	printf("%s", str);
