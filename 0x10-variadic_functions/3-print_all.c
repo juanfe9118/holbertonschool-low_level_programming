@@ -39,7 +39,7 @@ void print_s(va_list x)
 {
 	char *str = va_arg(x, char *);
 
-	if (*str == '\0')
+	if (str == NULL)
 		str = "(nil)";
 	printf("%s", str);
 }
@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 			if (func[j].func == format[i])
 			{
 				func[j].p(ar);
-				if (format[i + 1] != 0)
+				if (format[i + 1])
 					printf(", ");
 			}
 			j++;
