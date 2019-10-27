@@ -13,9 +13,9 @@ void print_all(const char * const format, ...)
 	char *str;
 
 	va_start(ar, format);
-	while (format && *(format + i) != '\0')
+	while (format != NULL && format[i])
 	{
-		form = *(format + i);
+		form = format[i];
 		switch (form)
 		{
 		case 'c':
@@ -29,13 +29,13 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			str = va_arg(ar, char *);
-			if (*str == '\0')
+			if (str == NULL)
 				str = "(nil)";
 			printf("%s", str);
 			break;
 		}
 		if ((form == 'c' || form == 'i' || form == 'f' || form == 's')
-		    && *(format + i + 1))
+		    && format[i + 1])
 			printf(", ");
 		i++;
 	}
