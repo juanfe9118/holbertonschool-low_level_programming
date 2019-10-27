@@ -1,6 +1,4 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
 
 /**
  *print_c - prints a char
@@ -11,6 +9,7 @@ void print_c(va_list x)
 {
 	printf("%c", va_arg(x, int));
 }
+
 /**
  *print_i - prints an int
  *@x: va_list passed to the function
@@ -20,6 +19,7 @@ void print_i(va_list x)
 {
 	printf("%d", va_arg(x, int));
 }
+
 /**
  *print_f - prints a float
  *@x: va_list passed to the function
@@ -29,6 +29,7 @@ void print_f(va_list x)
 {
 	printf("%f", va_arg(x, double));
 }
+
 /**
  *print_s - prints a string
  *@x: va_list passed to the function
@@ -38,14 +39,15 @@ void print_s(va_list x)
 {
 	char *str = va_arg(x, char *);
 
+	if (*str == '\0')
+		str = "(nil)";
 	printf("%s", str);
 }
+
 /**
- * print_all - printing all
- *
- * @format: is a list of types of arguments
- * We can not change the value or pointer
- * Return: Nothing, is void
+ * print_all - prints all kinds of types
+ * @format: the list of types of arguments
+ * Return: nothing
  */
 void print_all(const char * const format, ...)
 {
@@ -69,9 +71,8 @@ void print_all(const char * const format, ...)
 			if (func[j].func == format[i])
 			{
 				func[j].p(ar);
-				if (format[i + 1] != '\0')
+				if (format[i + 1] != 0)
 					printf(", ");
-				break;
 			}
 			j++;
 		}
