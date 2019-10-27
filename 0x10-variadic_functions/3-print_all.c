@@ -36,9 +36,9 @@ void print_all(const char * const format, ...)
 		}
 		if ((form == 'c' || form == 'i' || form == 'f' || form == 's')
 		    && format[i + 1] != '\0')
-		printf(", ");
+			printf(", ");
 		i++;
-}
+	}
 printf("\n");
 va_end(ar);
 }
