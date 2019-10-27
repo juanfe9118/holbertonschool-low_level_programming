@@ -1,50 +1,6 @@
 #include "variadic_functions.h"
 
 /**
- *print_c - prints a char
- *@x: va_list passed to the function
- *Return: nothing
- */
-void print_c(va_list x)
-{
-	printf("%c", va_arg(x, int));
-}
-
-/**
- *print_i - prints an int
- *@x: va_list passed to the function
- *Return: nothing
- */
-void print_i(va_list x)
-{
-	printf("%d", va_arg(x, int));
-}
-
-/**
- *print_f - prints a float
- *@x: va_list passed to the function
- *Return: nothing
- */
-void print_f(va_list x)
-{
-	printf("%f", va_arg(x, double));
-}
-
-/**
- *print_s - prints a string
- *@x: va_list passed to the function
- *Return: nothing
- */
-void print_s(va_list x)
-{
-	char *str = va_arg(x, char *);
-
-	if (str == NULL)
-		str = "(nil)";
-	printf("%s", str);
-}
-
-/**
  * print_all - prints all kinds of types
  * @format: the list of types of arguments
  * Return: nothing
@@ -52,32 +8,37 @@ void print_s(va_list x)
 void print_all(const char * const format, ...)
 {
 	va_list ar;
-	unsigned int i, j;
-	type func[] = {
-		{'c', print_c},
-		{'i', print_i},
-		{'f', print_f},
-		{'s', print_s},
-	};
+	int i = 0;
+	char form;
+	char *str;
 
-	i = 0;
 	va_start(ar, format);
-
-	while (format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
-		j = 0;
-		while (j < 4)
+		form = format[i];
+		switch (form)
 		{
-			if (func[j].func == format[i])
-			{
-				func[j].p(ar);
-				if (format[i + 1])
-					printf(", ");
-			}
-			j++;
+		case 'c':
+			printf("%c", va_arg(ar, int));
+			break;
+		case 'i':
+			printf("%d", va_arg(ar, int));
+			break;
+		case 'f':
+			printf("%f", va_arg(ar, double));
+			break;
+		case 's':
+			str = va_arg(ar, char *);
+			if (*str == '\0')
+				str = "(nil)";
+			printf("%s", str);
+			break;
 		}
+		if ((form == 'c' || form == 'i' || form == 'f' || form == 's')
+		    && format[i + 1] != '\0')
+		printf(", ");
 		i++;
-	}
-	printf("\n");
-	va_end(ar);
+}
+printf("\n");
+va_end(ar);
 }
