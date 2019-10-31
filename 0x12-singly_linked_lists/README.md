@@ -1,4 +1,4 @@
-# _Singly linked lists_
+# Singly linked lists
 ### This directory is for learning about _singly linked lists_ in C. The following is a brief description of the files here included:
 
 ##### lists.h
