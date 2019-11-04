@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- *print_listint - returns the number of elements in a linked listint_t list
- *@h: listint_t list to be printed
+ *listint_len - returns the number of elements in a linked listint_t list
+ *@h: the listint_t list
  *Return: number of elements in the list
  */
 size_t listint_len(const listint_t *h)
