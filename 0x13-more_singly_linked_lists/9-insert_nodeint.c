@@ -33,7 +33,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			i++;
 		}
 		if (!node_to_insert_after)
+		{
+			free(new_node);
 			return (NULL);
+		}
 		new_node->next = node_to_insert_after->next;
 		node_to_insert_after->next = new_node;
 	}
