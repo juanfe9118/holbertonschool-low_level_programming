@@ -1,5 +1,5 @@
 # More Singly linked lists
-### This directory is to understand the use of _singly linked lists_ more in depth. Belox is the description of the functions contained in this folder.
+### This directory is to understand the use of _singly linked lists_ more in depth. Below is the description of the functions contained in this folder.
 
 #### lists.h
 * Header file containing all the neccesary libraries for this project as well as the prototypes for all the functions.
@@ -35,4 +35,4 @@
 * Function that inserts a new node at a given position.
 
 #### 10-delete_nodeint.c
-* Function that deletes the node at index index of a listint_t linked list.
+* Function that deletes the node at index of a listint_t linked list.
