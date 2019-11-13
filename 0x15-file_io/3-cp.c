@@ -56,8 +56,8 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	if (close(f1) == -1)
-		err_cls(argv[0]);
-	if (close(f2) == -1)
 		err_cls(argv[1]);
+	if (close(f2) == -1)
+		err_cls(argv[2]);
 	return (0);
 }
