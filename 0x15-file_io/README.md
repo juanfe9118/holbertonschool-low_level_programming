@@ -14,4 +14,4 @@
 * Function that appends text at the end of a file.
 
 #### 3-cp.c
-*Program that copies the content of a file to another file.
+* Program that copies the content of a file to another file.
