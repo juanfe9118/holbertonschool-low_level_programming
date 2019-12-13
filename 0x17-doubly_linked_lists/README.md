@@ -1,6 +1,9 @@
 #Doubly Linked Lists
 ### This directory is for learning about _doubly linked lists in C_.
 
+#### lists.h
+* Header file containing all the neccesary libraries for this project as well as the prototypes for all the functions.
+
 #### 0-print_dlistint.c
 * Function that prints all the elements of a dlistint_t list.
 
