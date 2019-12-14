@@ -1,4 +1,4 @@
-#Doubly Linked Lists
+# Doubly Linked Lists
 ### This directory is for learning about _doubly linked lists in C_.
 
 #### lists.h
