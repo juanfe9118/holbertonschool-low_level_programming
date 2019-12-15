@@ -1,18 +1,21 @@
 #include "lists.h"
 
 /**
-  * new_malloc - allocates memory for a new node and assigns the value
-  * @new: dlistint_t node to be allocated
-  * @n: value to assign to new->n
-  * Return: the allocated node or NULL if failed
-  */
-dlistint_t *new_malloc(dlistint_t **new, int n)
+ * dlistint_len - returns the number of elements in a linked dlistint_t list
+ * @h: linkedlist to get the size for
+ * Return: the size of the list
+ */
+size_t dlistint_len(const dlistint_t *h)
 {
-	*new = malloc(sizeof(dlistint_t));
-	if (*new == NULL)
-		return (NULL);
-	(*new)->n = n;
-	return (*new);
+	size_t i;
+
+	if (h == NULL)
+		return (0);
+	for (i = 0; h != NULL; i++)
+	{
+		h = h->next;
+	}
+	return (i);
 }
 
 /**
@@ -25,17 +28,16 @@ dlistint_t *new_malloc(dlistint_t **new, int n)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new = NULL, *node_b4_ins = *h;
-	unsigned int i = 1;
+	unsigned int i = 1, len = dlistint_len(*h);
 
-	new_malloc(&new, n);
+	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
+	new->n = n;
 	if (idx == 0 && *h == NULL)
 	{
-		new->next = *h;
-		new->prev = NULL;
-		*h = new;
-		return (new);
+		add_dnodeint(h, n);
+		return ((*h));
 	}
 	if (idx == 0 && *h != NULL)
 	{
@@ -45,20 +47,21 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-	while (i < idx)
+	if (idx == len)
 	{
-		if (node_b4_ins == NULL)
-		{
-			free(new);
-			return (NULL);
-		}
-		node_b4_ins = node_b4_ins->next;
-		i += 1;
+		free(new);
+		new = add_dnodeint_end(h, n);
+		return (new);
 	}
-	if (node_b4_ins == NULL)
+	if (idx > len)
 	{
 		free(new);
 		return (NULL);
+	}
+	while (i < idx)
+	{
+		node_b4_ins = node_b4_ins->next;
+		i += 1;
 	}
 	new->next = node_b4_ins->next;
 	new->prev = node_b4_ins;
