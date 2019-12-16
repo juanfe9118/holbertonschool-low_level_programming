@@ -66,3 +66,6 @@
 
 #### 0x17-doubly_linked_lists
 * This directory is for learning about doubly linked lists in C.
+
+#### 0x18-dynamic_libraries
+* This directory is for learning about dynamic libraries in C.

@@ -1,5 +1,5 @@
 # Doubly Linked Lists
-### This directory is for learning about _doubly linked lists in C_.
+### This directory is for learning about _doubly linked lists in C_. Below is a description of all the files contained in this directory.
 
 #### lists.h
 * Header file containing all the neccesary libraries for this project as well as the prototypes for all the functions.
