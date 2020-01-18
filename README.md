@@ -1,7 +1,7 @@
 # Holberton School Low Level Programming 
 #### This repo is for learning lower level programmin languages starting with _C_, it has many sub directories which will contain practice projects. Here is a brief description of each one:
 
-#### 0x00-hello_world
+#### .[0x00-hello_world].(./0x00-hello_world)
 * This directory is for taking the first steps in C.
 
 #### 0x01-variables_if_else_while
@@ -69,3 +69,6 @@
 
 #### 0x18-dynamic_libraries
 * This directory is for learning about dynamic libraries in C.
+
+#### .[0x1A-hash_tables].(./0x1A-hash_tables)
+* This directory is for learning about hash tables in C.
