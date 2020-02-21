@@ -72,3 +72,6 @@
 
 #### [0x1A-hash_tables](./0x1A-hash_tables)
 * This directory is for learning about hash tables in C.
+
+#### [0x1C-makefiles](./0x1C-makefiles)
+* This directory is for learning about makefiles in C.
