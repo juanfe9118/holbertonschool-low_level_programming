@@ -75,3 +75,6 @@
 
 #### [0x1C-makefiles](./0x1C-makefiles)
 * This directory is for learning about makefiles in C.
+
+#### [0x1E-search_algorithms](./0x1E-search_algorithms)
+* This directory is for learning about search algorithms ins C.
